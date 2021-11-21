@@ -34,6 +34,19 @@ function isFull() {
     }
 }
 
+function removeItem(item) {  
+    for (i=0; i<basket.length; i++) {
+        if (basket[i] === item) {
+        basket.splice(basket.indexOf(item));
+            console.log(`${item} removed from your basket`);
+            return true;
+        }else {
+            console.log('That item is not in your basket');
+            return false;
+        }
+    }
+}
+
 console.log('Adding broccoli, expect true\: ', addItem('broccoli'));
 console.log('Adding asparagus, expect true\: ', addItem('asparagus'));
 console.log('Adding kumquats, expect true\: ', addItem('kumquats'));
@@ -42,6 +55,10 @@ console.log('Adding radishes, expect true\: ', addItem('radishes'));
 console.log('Adding onions, expect false\: ', addItem('onions'));
 
 console.log(`Basket is ${basket}`);
+listItems(basket);
+
+console.log('Removing item');
+removeItem('radishes');
 listItems(basket);
 
 empty(basket);
