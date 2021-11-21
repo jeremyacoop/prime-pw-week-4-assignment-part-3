@@ -15,16 +15,17 @@ function listItems(basket) {
 }// end listItems
 
 function empty(basket) {
-    basket = [];
-
+    basket.length = 0;
+    console.log(basket);
+    return basket;
 }// end empty
 
-console.log(addItem('broccoli'));
-console.log(addItem('asparagus'));
-console.log(addItem('kumquats'));
-console.log(addItem('grapes'));
+console.log('Adding broccoli, expect true\: ', addItem('broccoli'));
+console.log('Adding asparagus, expect true\: ', addItem('asparagus'));
+console.log('Adding kumquats, expect true\: ', addItem('kumquats'));
+console.log('Adding grapes, expect true\: ', addItem('grapes'));
 
-console.log(basket);
+console.log(`Basket is ${basket}`);
 listItems(basket);
 
 empty(basket);
