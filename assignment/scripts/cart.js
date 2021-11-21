@@ -5,8 +5,13 @@ let basket = [];
 const maxItems = 5;
 
 function addItem(item) {
-    basket.push(item);
-    return true;
+    if (isFull(basket) === false){
+        basket.push(item);
+        return true;
+    }else {
+        console.log('Basket is full! To add more items, others will need to be removed.')
+        return false;
+    }
 }// end addItem
 
 function listItems(basket) {
@@ -33,6 +38,8 @@ console.log('Adding broccoli, expect true\: ', addItem('broccoli'));
 console.log('Adding asparagus, expect true\: ', addItem('asparagus'));
 console.log('Adding kumquats, expect true\: ', addItem('kumquats'));
 console.log('Adding grapes, expect true\: ', addItem('grapes'));
+console.log('Adding radishes, expect true\: ', addItem('radishes'));
+console.log('Adding onions, expect false\: ', addItem('onions'));
 
 console.log(`Basket is ${basket}`);
 listItems(basket);
