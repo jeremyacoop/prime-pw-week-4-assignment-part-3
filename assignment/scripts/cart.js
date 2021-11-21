@@ -37,7 +37,7 @@ function isFull() {
 function removeItem(item) {  
     for (i=0; i<basket.length; i++) {
         if (basket[i] === item) {
-        basket.splice(basket.indexOf(item));
+        basket.splice(basket.indexOf(item, 1));
             console.log(`${item} removed from your basket`);
             return true;
         }else {
