@@ -41,11 +41,9 @@ function removeItem(item) {
             console.log(`${item} removed from your basket`);
             return basket;
         }
-
+    }
         console.log('That item is not in your basket');
         return basket;
-        
-    }
 }
 
 console.log('Adding broccoli, expect true\: ', addItem('broccoli'));
