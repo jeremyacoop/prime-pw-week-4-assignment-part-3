@@ -37,13 +37,14 @@ function isFull() {
 function removeItem(item) {  
     for (i=0; i<basket.length; i++) {
         if (basket[i] === item) {
-        basket.splice(basket.indexOf(item, 1));
+            basket.splice(basket.indexOf(item, 1));
             console.log(`${item} removed from your basket`);
-            return true;
-        }else {
-            console.log('That item is not in your basket');
-            return false;
+            return basket;
         }
+
+        console.log('That item is not in your basket');
+        return basket;
+        
     }
 }
 
